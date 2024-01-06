@@ -1,6 +1,6 @@
 import { Constants } from "./utils/constants.js";
 import { getLanguage, translate } from "./languages/index.js";
-import { writeFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { logger } from "./utils/logger.js";
 
@@ -104,6 +104,7 @@ async function processLanguages() {
 
     logger.info(`Writing ${language} log...`);
     const logFile = `${language}.log`;
+    await mkdir(Constants.logsDir, { recursive: true });
     const logFilePath = path.join(Constants.logsDir, logFile);
     await writeFile(logFilePath, translatedValues.flat().join("\n"));
     logger.info(`Wrote ${language} log to ${logFilePath}`);
