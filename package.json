@@ -1,0 +1,20 @@
+{
+  "name": "i18n-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "license": "MIT",
+  "files": ["src"],
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-translate": "^3.485.0",
+    "colorette": "^2.0.20",
+    "dotenv": "^16.3.1",
+    "path": "^0.12.7",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1"
+  }
+}

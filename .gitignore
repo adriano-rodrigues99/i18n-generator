@@ -1,0 +1,5 @@
+node_modules
+.env
+.idea
+src/logs/*
+src/languages/*.json
